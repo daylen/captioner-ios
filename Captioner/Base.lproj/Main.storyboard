@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z0K-gr-Cia">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Captioner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRg-Ae-vmu">
+                                <rect key="frame" x="200" y="250" width="200" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG8-hN-X4w">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="cJK-wW-7vI"/>
+                                            <constraint firstAttribute="width" constant="100" id="kr2-oC-RmZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Camera"/>
+                                        <connections>
+                                            <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJE-5c-l1s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-NW-guv">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="039-Y3-bRT"/>
+                                            <constraint firstAttribute="height" constant="100" id="0mf-Ok-DUd"/>
+                                            <constraint firstAttribute="width" constant="154" id="4E9-UY-B3H"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="5BB-3H-BN5"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="O7z-Yq-xqS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="PhotoLibrary"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4E9-UY-B3H"/>
+                                                <exclude reference="5BB-3H-BN5"/>
+                                                <exclude reference="O7z-Yq-xqS"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="photoLibraryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8he-1u-fk1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YRg-Ae-vmu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8UC-B1-ZhU"/>
+                            <constraint firstItem="YRg-Ae-vmu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="liB-FV-tKo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ij9-0A-JZw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="357"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KZZ-FX-wKu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z0K-gr-Cia" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WH2-dZ-9fl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oYr-Mg-dXa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVi-pa-GKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="-335"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="100" height="100"/>
+        <image name="PhotoLibrary" width="100" height="100"/>
+    </resources>
 </document>

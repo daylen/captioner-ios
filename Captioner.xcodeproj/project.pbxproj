@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26948EA19D55049F9DDBB76B /* Pods_Captioner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D18369EABA51889FD2CB69E /* Pods_Captioner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		770942C71C864016007A05AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770942C61C864016007A05AE /* AppDelegate.swift */; };
 		770942C91C864016007A05AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770942C81C864016007A05AE /* ViewController.swift */; };
 		770942CC1C864016007A05AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770942CA1C864016007A05AE /* Main.storyboard */; };
 		770942CE1C864016007A05AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770942CD1C864016007A05AE /* Assets.xcassets */; };
 		770942D11C864016007A05AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770942CF1C864016007A05AE /* LaunchScreen.storyboard */; };
+		77F33B401C876A500060E512 /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F33B3F1C876A500060E512 /* CaptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FAF3997521A65B63EC92588 /* Pods-Captioner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captioner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Captioner/Pods-Captioner.debug.xcconfig"; sourceTree = "<group>"; };
+		4D18369EABA51889FD2CB69E /* Pods_Captioner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captioner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		770942C31C864016007A05AE /* Captioner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captioner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		770942C61C864016007A05AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		770942C81C864016007A05AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		770942CD1C864016007A05AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		770942D01C864016007A05AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		770942D21C864016007A05AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77F33B3F1C876A500060E512 /* CaptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
+		E505E16AB8CF3EFFEC968C18 /* Pods-Captioner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captioner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Captioner/Pods-Captioner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26948EA19D55049F9DDBB76B /* Pods_Captioner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				770942C51C864016007A05AE /* Captioner */,
 				770942C41C864016007A05AE /* Products */,
+				D67606AC00280FF47C384F7B /* Pods */,
+				AF4715819131A37A36116B9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				770942CD1C864016007A05AE /* Assets.xcassets */,
 				770942CF1C864016007A05AE /* LaunchScreen.storyboard */,
 				770942D21C864016007A05AE /* Info.plist */,
+				77F33B3F1C876A500060E512 /* CaptionViewController.swift */,
 			);
 			path = Captioner;
+			sourceTree = "<group>";
+		};
+		AF4715819131A37A36116B9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D18369EABA51889FD2CB69E /* Pods_Captioner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D67606AC00280FF47C384F7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FAF3997521A65B63EC92588 /* Pods-Captioner.debug.xcconfig */,
+				E505E16AB8CF3EFFEC968C18 /* Pods-Captioner.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 770942D51C864016007A05AE /* Build configuration list for PBXNativeTarget "Captioner" */;
 			buildPhases = (
+				15755585951E2BD620CA1610 /* Check Pods Manifest.lock */,
 				770942BF1C864016007A05AE /* Sources */,
 				770942C01C864016007A05AE /* Frameworks */,
 				770942C11C864016007A05AE /* Resources */,
+				329274F4FDDE779A5E3720ED /* Embed Pods Frameworks */,
+				A61AF4542709B3B83E9C4F58 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +126,7 @@
 				TargetAttributes = {
 					770942C21C864016007A05AE = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = NR8F7ZFLA3;
 					};
 				};
 			};
@@ -130,12 +161,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15755585951E2BD620CA1610 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		329274F4FDDE779A5E3720ED /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captioner/Pods-Captioner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A61AF4542709B3B83E9C4F58 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captioner/Pods-Captioner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		770942BF1C864016007A05AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				770942C91C864016007A05AE /* ViewController.swift in Sources */,
+				77F33B401C876A500060E512 /* CaptionViewController.swift in Sources */,
 				770942C71C864016007A05AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,23 +325,31 @@
 		};
 		770942D61C864016007A05AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FAF3997521A65B63EC92588 /* Pods-Captioner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Captioner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daylenyang.Captioner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		770942D71C864016007A05AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E505E16AB8CF3EFFEC968C18 /* Pods-Captioner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Captioner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daylenyang.Captioner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -284,6 +372,7 @@
 				770942D71C864016007A05AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
